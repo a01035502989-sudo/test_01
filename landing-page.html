@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남뉴스통신 - 장인영 대표</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;900&family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .serif-font {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0A192F',
+                            800: '#112240',
+                        },
+                        gold: {
+                            500: '#C5A059',
+                            600: '#B08D48',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="navigateTo('home')">
+                    <span class="serif-font text-2xl font-black text-navy-900 tracking-tighter">KNANA<span class="text-gold-500">.</span>KR</span>
+                    <p class="text-xs text-slate-500 font-medium tracking-widest uppercase">Gyeongnam News Communication</p>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <button onclick="navigateTo('home')" class="text-slate-600 hover:text-navy-900 font-medium transition">홈</button>
+                    <button onclick="navigateTo('page-profile')" class="text-slate-600 hover:text-navy-900 font-medium transition">대표 소개</button>
+                    <button onclick="navigateTo('page-service')" class="text-slate-600 hover:text-navy-900 font-medium transition">비즈니스</button>
+                    <button onclick="navigateTo('page-archive')" class="text-slate-600 hover:text-navy-900 font-medium transition">아카이브</button>
+                    <button onclick="navigateTo('page-contact')" class="bg-navy-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-navy-800 transition shadow-lg transform hover:-translate-y-0.5">
+                        제휴 문의
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-3 text-slate-600 font-medium border-b border-slate-50">홈</button>
+                <button onclick="navigateTo('page-profile')" class="block w-full text-left px-3 py-3 text-slate-600 font-medium border-b border-slate-50">대표 소개</button>
+                <button onclick="navigateTo('page-service')" class="block w-full text-left px-3 py-3 text-slate-600 font-medium border-b border-slate-50">비즈니스</button>
+                <button onclick="navigateTo('page-archive')" class="block w-full text-left px-3 py-3 text-slate-600 font-medium border-b border-slate-50">아카이브</button>
+                <button onclick="navigateTo('page-contact')" class="block w-full text-left px-3 py-3 text-gold-600 font-bold">제휴 문의</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="pt-20">
+        
+        <!-- ==================== HOME PAGE ==================== -->
+        <div id="home" class="fade-in">
+            <!-- Hero Section -->
+            <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+                <!-- Background Image with Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://loremflickr.com/1600/900/news,building" alt="Background" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-navy-900/80 mix-blend-multiply"></div>
+                </div>
+
+                <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+                    <span class="inline-block py-1 px-3 rounded-full bg-gold-500/20 text-gold-500 text-sm font-bold tracking-widest mb-6 border border-gold-500/30 uppercase">Journalism & Branding</span>
+                    <h1 class="serif-font text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+                        경남의 내일을 잇는<br>
+                        <span class="text-gold-500">진실된 목소리</span>, 장인영입니다.
+                    </h1>
+                    <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                        팩트 너머의 진실을 추구합니다. <br class="hidden md:block">
+                        경남뉴스통신은 지역 사회의 가치를 높이고, 귀사의 브랜드에 신뢰를 더하는 최고의 파트너입니다.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <button onclick="navigateTo('page-contact')" class="px-8 py-4 bg-gold-500 hover:bg-gold-600 text-white rounded text-lg font-semibold transition shadow-lg">
+                            파트너십 제안하기
+                        </button>
+                        <button onclick="navigateTo('page-profile')" class="px-8 py-4 bg-transparent border border-white text-white hover:bg-white hover:text-navy-900 rounded text-lg font-medium transition">
+                            대표 프로필 보기
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Philosophy Section -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold-500/20 rounded-full -z-10"></div>
+                            <img src="https://loremflickr.com/800/600/writing,hand" alt="Journalism Philosophy" class="rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                        <div>
+                            <h2 class="serif-font text-4xl font-bold text-navy-900 mb-6">언론은 단순한<br>정보 전달자가 아닙니다.</h2>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                                지역 사회의 맥박을 짚고, 올바른 방향을 제시하는 나침반이어야 합니다. 경남뉴스통신은 속도 경쟁보다는 깊이 있는 분석을, 자극적인 이슈보다는 문제의 본질을 탐구합니다.
+                            </p>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                                기업과 관공서가 전하고자 하는 진심이 독자들에게 오롯이 닿을 수 있도록, 가장 품격 있는 언어로 이야기를 빚어냅니다.
+                            </p>
+                            <div class="border-l-4 border-gold-500 pl-6 italic text-slate-700">
+                                "신뢰는 하루아침에 쌓이지 않습니다. <br>우리는 매일, 한 줄의 기사로 그 신뢰를 증명합니다."
+                            </div>
+                            <div class="mt-4 font-bold text-navy-900 pl-6">- 대표 장인영</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact & Social Proof -->
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="serif-font text-3xl font-bold text-navy-900">숫자로 보는 영향력</h2>
+                        <p class="text-slate-500 mt-4">경남 지역 내 독보적인 매체 신뢰도를 자랑합니다.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                            <div class="text-4xl font-bold text-gold-500 mb-2">100K+</div>
+                            <div class="text-slate-600 font-medium">월간 방문자</div>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                            <div class="text-4xl font-bold text-navy-900 mb-2">50+</div>
+                            <div class="text-slate-600 font-medium">제휴 관공서/기업</div>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                            <div class="text-4xl font-bold text-gold-500 mb-2">10yr+</div>
+                            <div class="text-slate-600 font-medium">언론 경력</div>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                            <div class="text-4xl font-bold text-navy-900 mb-2">Top 3</div>
+                            <div class="text-slate-600 font-medium">지역 매체 영향력</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured / CTA -->
+            <section class="py-24 bg-navy-900 text-white text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <h2 class="serif-font text-4xl font-bold mb-6">성공적인 홍보 파트너십을 시작하세요</h2>
+                    <p class="text-slate-300 text-lg mb-10">
+                        귀사의 브랜드 가치를 높이는 가장 확실한 방법, 경남뉴스통신과 함께라면 가능합니다.
+                    </p>
+                    <button onclick="navigateTo('page-contact')" class="bg-gold-500 hover:bg-gold-600 text-white px-10 py-4 rounded-full text-lg font-bold transition shadow-lg transform hover:scale-105">
+                        무료 상담 신청하기
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== SUB PAGE 1: PROFILE ==================== -->
+        <div id="page-profile" class="hidden fade-in">
+            <div class="bg-navy-900 py-20 text-center text-white">
+                <h1 class="serif-font text-4xl font-bold mb-4">CEO Profile</h1>
+                <p class="text-slate-300">진심을 담아 뉴스를 씁니다, 장인영입니다.</p>
+            </div>
+            <div class="max-w-5xl mx-auto px-4 py-16">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://loremflickr.com/600/800/woman,business,suit" alt="CEO Portrait" class="w-full rounded-lg shadow-xl mb-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                            <h3 class="serif-font text-xl font-bold text-navy-900 mb-4">Contact</h3>
+                            <ul class="space-y-3 text-slate-600 text-sm">
+                                <li><i class="fas fa-envelope w-6 text-gold-500"></i> ceo@knana.kr</li>
+                                <li><i class="fas fa-phone w-6 text-gold-500"></i> 055-123-4567</li>
+                                <li><i class="fas fa-map-marker-alt w-6 text-gold-500"></i> 경상남도 창원시 성산구</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="serif-font text-3xl font-bold text-navy-900 mb-6">약력 및 활동</h2>
+                        
+                        <div class="space-y-8 border-l-2 border-slate-200 pl-8 ml-4 relative">
+                            <!-- Timeline Item -->
+                            <div class="relative">
+                                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-gold-500 border-4 border-white shadow-sm"></div>
+                                <h4 class="text-xl font-bold text-navy-900">현) 경남뉴스통신 대표이사</h4>
+                                <p class="text-slate-500 text-sm mb-2">2018 - 현재</p>
+                                <p class="text-slate-600">경남 지역의 주요 이슈를 심층 보도하며, 지역 언론의 새로운 지평을 열어가고 있습니다.</p>
+                            </div>
+                            
+                            <div class="relative">
+                                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-300 border-4 border-white shadow-sm"></div>
+                                <h4 class="text-xl font-bold text-navy-900">전) OO일보 정치부 기자</h4>
+                                <p class="text-slate-500 text-sm mb-2">2010 - 2017</p>
+                                <p class="text-slate-600">국회 및 지방 의회 출입 기자로 활동하며 다수의 특종 보도 및 기획 시리즈 연재.</p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-300 border-4 border-white shadow-sm"></div>
+                                <h4 class="text-xl font-bold text-navy-900">주요 수상 내역</h4>
+                                <ul class="list-disc list-inside text-slate-600 mt-2 space-y-1">
+                                    <li>2022 경남 언론인상 대상 수상</li>
+                                    <li>2019 지역사회공헌 도지사 표창</li>
+                                    <li>2015 한국기자협회 '이달의 기자상' 수상</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 p-8 bg-slate-50 rounded-xl">
+                            <h3 class="serif-font text-2xl font-bold text-navy-900 mb-4">CEO Message</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                "정보의 홍수 속에서 진실을 가려내는 눈, 그것이 바로 언론의 역할입니다. 저는 지난 10여 년간 현장을 누비며 수많은 사람들의 목소리를 들어왔습니다. 경남뉴스통신은 단순한 뉴스 전달을 넘어, 기업과 시민, 관공서를 잇는 소통의 가교가 되겠습니다."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SUB PAGE 2: BUSINESS ==================== -->
+        <div id="page-service" class="hidden fade-in">
+            <div class="bg-slate-100 py-20 text-center">
+                <h1 class="serif-font text-4xl font-bold text-navy-900 mb-4">Business & Solution</h1>
+                <p class="text-slate-600">기업과 관공서에 최적화된 홍보 솔루션을 제공합니다.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://loremflickr.com/800/600/marketing,meeting" alt="Brand Journalism" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 text-xl">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h3 class="serif-font text-2xl font-bold text-navy-900 mb-3">브랜드 저널리즘</h3>
+                            <p class="text-slate-600 mb-6 h-20">
+                                단순 광고가 아닌, 기사의 형식을 빌려 기업의 가치와 철학을 스토리텔링합니다. 독자들에게 자연스럽게 스며드는 홍보 효과를 경험하세요.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-2 mb-6">
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>CEO 인터뷰 및 기획 기사</li>
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>기업 탐방 및 현장 스케치</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://loremflickr.com/800/600/newspaper,ad" alt="Banner Ads" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 text-xl">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3 class="serif-font text-2xl font-bold text-navy-900 mb-3">디지털 배너 광고</h3>
+                            <p class="text-slate-600 mb-6 h-20">
+                                경남뉴스통신 웹사이트의 주요 영역에 배너를 노출하여 브랜드 인지도를 극대화합니다. PC와 모바일에 최적화된 반응형 광고를 지원합니다.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-2 mb-6">
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>메인 상단/중단 배너</li>
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>기사 본문 내 인스트림 광고</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://loremflickr.com/800/600/handshake,business" alt="Public Campaign" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 text-xl">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3 class="serif-font text-2xl font-bold text-navy-900 mb-3">공공 캠페인 기획</h3>
+                            <p class="text-slate-600 mb-6 h-20">
+                                지자체 및 관공서의 정책 홍보를 위한 온/오프라인 캠페인을 기획하고 실행합니다. 공익적 가치와 홍보 효과를 동시에 달성합니다.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-2 mb-6">
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>정책 홍보 시리즈 기획</li>
+                                <li><i class="fas fa-check text-gold-500 mr-2"></i>지역 축제 및 행사 미디어 파트너</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <button class="border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white px-8 py-3 rounded font-bold transition duration-300">
+                        <i class="fas fa-file-download mr-2"></i> 미디어 소개서(PDF) 다운로드
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SUB PAGE 3: ARCHIVE ==================== -->
+        <div id="page-archive" class="hidden fade-in">
+            <div class="bg-white py-20 text-center border-b border-slate-200">
+                <h1 class="serif-font text-4xl font-bold text-navy-900 mb-4">Insight & Archive</h1>
+                <p class="text-slate-600">장인영 대표의 시선으로 기록한 주요 기사와 칼럼을 모았습니다.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 py-16">
+                <!-- Filters -->
+                <div class="flex justify-center space-x-4 mb-12">
+                    <button class="px-4 py-2 bg-navy-900 text-white rounded-full text-sm font-medium">전체</button>
+                    <button class="px-4 py-2 bg-slate-200 text-slate-600 hover:bg-slate-300 rounded-full text-sm font-medium transition">오피니언/칼럼</button>
+                    <button class="px-4 py-2 bg-slate-200 text-slate-600 hover:bg-slate-300 rounded-full text-sm font-medium transition">기획취재</button>
+                    <button class="px-4 py-2 bg-slate-200 text-slate-600 hover:bg-slate-300 rounded-full text-sm font-medium transition">인터뷰</button>
+                </div>
+
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article Card 1 -->
+                    <article class="bg-white border border-slate-100 rounded-lg overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="https://loremflickr.com/600/400/press,conference" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider mb-2">Opinion</span>
+                            <h3 class="serif-font text-xl font-bold text-navy-900 mb-3 hover:text-gold-600 cursor-pointer">[장인영 칼럼] 지역 언론이 나아가야 할 길</h3>
+                            <p class="text-slate-500 text-sm line-clamp-3 flex-1">
+                                디지털 대전환의 시대, 지역 언론은 위기인가 기회인가. 
+                                풀뿌리 민주주의의 보루로서 지역 언론이 지켜야 할 가치와 혁신 전략에 대해 논한다...
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between text-xs text-slate-400">
+                                <span>2023. 10. 24</span>
+                                <span>Read more &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="bg-white border border-slate-100 rounded-lg overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="https://loremflickr.com/600/400/seoul,city" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider mb-2">Special Report</span>
+                            <h3 class="serif-font text-xl font-bold text-navy-900 mb-3 hover:text-gold-600 cursor-pointer">경남의 미래 산업 지도를 그리다</h3>
+                            <p class="text-slate-500 text-sm line-clamp-3 flex-1">
+                                창원 국가산단부터 우주항공청 설립까지. 경남의 경제 지형을 바꿀 핵심 산업 현장을 심층 취재했다. 
+                                현장의 목소리와 전문가들의 제언을 통해...
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between text-xs text-slate-400">
+                                <span>2023. 09. 15</span>
+                                <span>Read more &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="bg-white border border-slate-100 rounded-lg overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                        <img src="https://loremflickr.com/600/400/people,interview" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider mb-2">Interview</span>
+                            <h3 class="serif-font text-xl font-bold text-navy-900 mb-3 hover:text-gold-600 cursor-pointer">OOO 시장 취임 1주년 특별 대담</h3>
+                            <p class="text-slate-500 text-sm line-clamp-3 flex-1">
+                                민선 8기 1주년을 맞아 OOO 시장을 만나 지난 성과와 향후 시정 운영 방향에 대해 들어보았다. 
+                                시민들과의 소통 강화와 경제 활성화 대책은...
+                            </p>
+                            <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between text-xs text-slate-400">
+                                <span>2023. 08. 01</span>
+                                <span>Read more &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SUB PAGE 4: CONTACT ==================== -->
+        <div id="page-contact" class="hidden fade-in">
+            <div class="bg-navy-900 py-20 text-center text-white">
+                <h1 class="serif-font text-4xl font-bold mb-4">Contact Us</h1>
+                <p class="text-slate-300">귀사의 이야기가 가장 품격 있게 전달될 수 있도록 돕겠습니다.</p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="serif-font text-2xl font-bold text-navy-900 mb-6">오시는 길 & 연락처</h2>
+                        <div class="bg-slate-100 h-64 rounded-lg mb-8 flex items-center justify-center text-slate-400">
+                            <!-- Map Placeholder -->
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-4xl mb-2"></i>
+                                <p>Google Maps Placeholder</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-navy-900 text-white rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-navy-900">Address</h4>
+                                    <p class="text-slate-600">경상남도 창원시 성산구 중앙대로 123, 경남뉴스통신 빌딩 5층</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-navy-900 text-white rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-navy-900">Phone</h4>
+                                    <p class="text-slate-600">055-123-4567 (대표전화)</p>
+                                    <p class="text-slate-600">055-123-4568 (광고문의)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-navy-900 text-white rounded-full flex items-center justify-center mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-navy-900">Email</h4>
+                                    <p class="text-slate-600">contact@knana.kr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <h2 class="serif-font text-2xl font-bold text-navy-900 mb-6">제휴 및 광고 문의</h2>
+                        <form onsubmit="event.preventDefault(); alert('문의가 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.');" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">담당자명</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-900 focus:border-transparent outline-none transition" placeholder="홍길동">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-2">소속 (기업/기관명)</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-900 focus:border-transparent outline-none transition" placeholder="경남뉴스통신">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">연락처</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-900 focus:border-transparent outline-none transition" placeholder="010-0000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">문의 내용</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-900 focus:border-transparent outline-none transition" placeholder="광고 제휴 관련 문의드립니다."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-navy-900 text-white font-bold py-4 rounded-lg hover:bg-navy-800 transition duration-300 shadow-md">
+                                문의하기
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="serif-font text-2xl font-bold text-white block mb-4">KNANA.KR</span>
+                    <p class="text-sm leading-relaxed">
+                        경남뉴스통신은 지역 사회의 올바른 여론 형성을 위해 노력합니다. 
+                        정론직필의 정신으로 독자 여러분과 함께하겠습니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><button onclick="navigateTo('home')" class="hover:text-gold-500">홈</button></li>
+                        <li><button onclick="navigateTo('page-profile')" class="hover:text-gold-500">대표 소개</button></li>
+                        <li><button onclick="navigateTo('page-service')" class="hover:text-gold-500">비즈니스</button></li>
+                        <li><button onclick="navigateTo('page-contact')" class="hover:text-gold-500">제휴 문의</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>경상남도 창원시 성산구 중앙대로 123</li>
+                        <li>Tel: 055-123-4567</li>
+                        <li>Email: master@knana.kr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2023 Gyeongnam News Communication. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Simple SPA Navigation Logic
+        function navigateTo(pageId) {
+            // 1. Hide all pages
+            const pages = ['home', 'page-profile', 'page-service', 'page-archive', 'page-contact'];
+            pages.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+
+            // 2. Show target page
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.remove('hidden');
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+
+            // 3. Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
